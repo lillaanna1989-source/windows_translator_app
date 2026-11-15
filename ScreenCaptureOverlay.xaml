@@ -1,0 +1,13 @@
+<Window x:Class="WindowsWritingAssistant.ScreenCaptureOverlay"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ WindowStyle="None" AllowsTransparency="True" Background="#33000000" Topmost="True"
+ ShowInTaskbar="False" Cursor="Cross" Left="0" Top="0"
+ Width="{x:Static SystemParameters.VirtualScreenWidth}" Height="{x:Static SystemParameters.VirtualScreenHeight}">
+ <Canvas x:Name="Surface" Background="Transparent" MouseLeftButtonDown="Down" MouseMove="Move" MouseLeftButtonUp="Up" KeyDown="Keys">
+  <Border x:Name="Selection" Visibility="Collapsed" BorderBrush="#1683FF" BorderThickness="2" Background="#18FFFFFF"/>
+  <Border Canvas.Left="20" Canvas.Top="20" Background="#EFFFFFFF" CornerRadius="8" Padding="12,8">
+   <TextBlock Text="Drag around text to translate • Esc to cancel" Foreground="#111827" FontSize="14"/>
+  </Border>
+ </Canvas>
+</Window>
